@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <style>
+        .chatbot-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* Style for blur effect when popup is open */
+        body.popup-open::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            backdrop-filter: blur(5px);
+            z-index: 1;
+            pointer-events: none;
+        }
+    </style>
+    <div class="chatbot-container">
+        <script async type='module' src='https://interfaces.zapier.com/assets/web-components/zapier-interfaces/zapier-interfaces.esm.js'></script>
+        <zapier-interfaces-chatbot-embed is-popup='true' chatbot-id='cm53kl73c007hwezxkvcofmap'></zapier-interfaces-chatbot-embed>
+    </div>
+</body>
+</html>
